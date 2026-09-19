@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://unlockedarcmedia-lgtm.github.io/Unlocked_Arc/sitemap.xml

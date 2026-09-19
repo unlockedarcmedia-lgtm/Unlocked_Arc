@@ -1,16 +1,23 @@
-# UNLOCKED ARC — Worldwide Story Website
-This version adds a worldwide story-submission page, optional photo upload field, optional phone/WhatsApp, privacy preference, consent language, and contact section.
+# UNLOCKED ARC — Google-ready GitHub Pages package
 
-IMPORTANT: GitHub Pages is static. The form is only the front end; GitHub Pages does not store submissions or uploaded photos. Connect the form to a form backend/service before using it publicly, then replace `<form action="#">` in `index.html` with that service's endpoint.
+Website: https://unlockedarcmedia-lgtm.github.io/Unlocked_Arc/
 
-Replace `YOUR-EMAIL@example.com` and `+00 000 000 0000` with your official contact details.
+Upload all files in this folder to the root of your GitHub Pages repository.
 
-For real submissions, get clear permission before adapting or publishing someone's story, respect anonymity requests, and collect only information you actually need.
+Included:
+- index.html — SEO metadata, canonical URL, social sharing metadata, structured data
+- style.css — existing design
+- unlocked-arc-banner.png — supplied hero image
+- unlocked-arc-logo.png — supplied logo
+- robots.txt — crawl instructions and sitemap location
+- sitemap.xml — homepage sitemap
 
+Important: GitHub Pages is static. The story form is still a front-end form and is not a secure submission backend. Connect it to a proper form service/backend before accepting real story/photo submissions.
 
-## Logo
-`unlocked-arc-logo.png` is the UNLOCKED ARC logo supplied for this website.
-
-
-## Banner
-`unlocked-arc-banner.png` is the supplied UNLOCKED ARC website hero banner.
+Next:
+1. Upload/replace these files in the `Unlocked_Arc` repository.
+2. Confirm GitHub Pages uses `main` and `/ (root)`.
+3. Add `https://unlockedarcmedia-lgtm.github.io/Unlocked_Arc/` as a URL-prefix property in Google Search Console.
+4. Verify ownership.
+5. Use URL Inspection and request indexing for `https://unlockedarcmedia-lgtm.github.io/Unlocked_Arc/`.
+6. Submit `https://unlockedarcmedia-lgtm.github.io/Unlocked_Arc/sitemap.xml` in the Sitemaps report.
