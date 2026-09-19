@@ -1,19 +1,16 @@
-# UNLOCKED ARC Website
+# UNLOCKED ARC — Worldwide Story Website
+This version adds a worldwide story-submission page, optional photo upload field, optional phone/WhatsApp, privacy preference, consent language, and contact section.
 
-A simple starter website for UNLOCKED ARC.
+IMPORTANT: GitHub Pages is static. The form is only the front end; GitHub Pages does not store submissions or uploaded photos. Connect the form to a form backend/service before using it publicly, then replace `<form action="#">` in `index.html` with that service's endpoint.
 
-## Files
-- `index.html` — website structure and content
-- `style.css` — design and responsive styling
+Replace `YOUR-EMAIL@example.com` and `+00 000 000 0000` with your official contact details.
 
-## Run locally
-Open `index.html` in a browser.
+For real submissions, get clear permission before adapting or publishing someone's story, respect anonymity requests, and collect only information you actually need.
 
-## Publish with GitHub Pages
-1. Upload `index.html` and `style.css` to your GitHub repository.
-2. Open **Settings → Pages**.
-3. Under **Build and deployment**, select **Deploy from a branch**.
-4. Choose the `main` branch and `/ (root)`.
-5. Save.
 
-GitHub will provide your public website address after deployment.
+## Logo
+`unlocked-arc-logo.png` is the UNLOCKED ARC logo supplied for this website.
+
+
+## Banner
+`unlocked-arc-banner.png` is the supplied UNLOCKED ARC website hero banner.

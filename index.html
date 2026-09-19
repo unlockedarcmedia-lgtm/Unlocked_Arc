@@ -1,84 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="UNLOCKED ARC — stories, ideas and perspectives that make you stop, think and feel.">
-  <title>UNLOCKED ARC | Stories That Stay With You</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="UNLOCKED ARC — real stories, real people, meaningful moments.">
+<title>UNLOCKED ARC — Every Life Has an Untold Arc</title>
+<link rel="preload" as="image" href="unlocked-arc-banner.png"><link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav">
-    <a class="logo" href="#home">UNLOCKED <span>ARC</span></a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#content">Content</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header class="nav"><a class="logo" href="#home"><img src="unlocked-arc-logo.png" alt="UNLOCKED ARC logo"></a>
+<nav><a href="#stories">Stories</a><a href="#share">Share Your Story</a><a href="#about">About</a><a href="#contact">Contact</a></nav></header>
+<main>
+<section id="home" class="hero"><div><p class="eyebrow">A WORLDWIDE STORY PROJECT</p>
+<h1>Every life has<br><i>an untold arc.</i></h1>
+<p class="lead">UNLOCKED ARC collects real human stories from around the world — moments of struggle, hope, loss, courage, change and everything in between.</p>
+<a class="btn" href="#share">Share your story</a></div></section>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">UNLOCKED ARC</p>
-        <h1>Stories that make you<br><span>feel something.</span></h1>
-        <p class="hero-text">
-          Real moments. Human stories. Ideas worth remembering.
-          Welcome to UNLOCKED ARC.
-        </p>
-        <div class="buttons">
-          <a class="button primary" href="#content">Explore</a>
-          <a class="button secondary" href="#about">Our story</a>
-        </div>
-      </div>
-    </section>
+<section id="stories" class="section"><p class="eyebrow">THE IDEA</p><h2>Real stories deserve to be heard.</h2>
+<p class="lead">A face. A place. A moment. A truth that changed someone. With permission, a real experience can become a meaningful cinematic animated story.</p>
+<div class="cards"><article><small>01</small><h3>Tell us</h3><p>Share what happened in your own words. It does not have to be perfect.</p></article>
+<article><small>02</small><h3>We shape it</h3><p>We find the heart of the experience and develop it into a visual story.</p></article>
+<article><small>03</small><h3>It travels</h3><p>A story from one person can give perspective or hope to someone thousands of miles away.</p></article></div></section>
 
-    <section id="about" class="section">
-      <p class="eyebrow">ABOUT</p>
-      <h2>There is always more beneath the surface.</h2>
-      <p class="lead">
-        UNLOCKED ARC is a digital media project built around meaningful
-        stories, powerful perspectives and moments from real life.
-      </p>
-    </section>
+<section class="manifesto"><p>“Some stories are never written.<br>They are simply lived.”</p></section>
 
-    <section id="content" class="section cards-section">
-      <p class="eyebrow">WHAT WE CREATE</p>
-      <h2>Content with a pulse.</h2>
-      <div class="cards">
-        <article class="card">
-          <div class="number">01</div>
-          <h3>Stories</h3>
-          <p>Human experiences told simply, honestly and emotionally.</p>
-        </article>
-        <article class="card">
-          <div class="number">02</div>
-          <h3>Perspectives</h3>
-          <p>Ideas that challenge the obvious and invite deeper thought.</p>
-        </article>
-        <article class="card">
-          <div class="number">03</div>
-          <h3>Moments</h3>
-          <p>Short-form visual content designed to stay with you.</p>
-        </article>
-      </div>
-    </section>
+<section id="share" class="section form-section"><p class="eyebrow">SHARE YOUR STORY</p><h2>What happened to you?</h2>
+<p class="lead">Tell us the story behind the moment. You can use your real name or ask us to keep your identity private.</p>
+<form action="#" method="post" enctype="multipart/form-data">
+<div class="grid"><label>Name<input name="name" placeholder="Your name"></label><label>Email<input type="email" name="email" placeholder="you@example.com" required></label></div>
+<div class="grid"><label>Country<input name="country" placeholder="Where are you from?"></label><label>Phone / WhatsApp (optional)<input type="tel" name="phone" placeholder="+1... / +91..."></label></div>
+<label>Your story<textarea name="story" rows="9" placeholder="Tell us what happened, what you felt, and what changed..." required></textarea></label>
+<label>Photo (optional)<input type="file" name="photo" accept="image/*"></label>
+<label class="check"><input type="checkbox" name="private"> I would like my identity kept private if my story is selected.</label>
+<label class="check"><input type="checkbox" name="permission" required> I understand that UNLOCKED ARC may contact me about adapting my story into content. Submission does not guarantee publication.</label>
+<button class="btn" type="submit">Submit story</button>
+<p class="note">Please do not submit passwords, financial information, or emergency/crisis information.</p>
+</form></section>
 
-    <section class="quote">
-      <p>“Nothing to chase. Nothing to prove. Just a moment to feel alive.”</p>
-    </section>
+<section id="about" class="section"><p class="eyebrow">ABOUT UNLOCKED ARC</p><h2>One world. Millions of stories.</h2>
+<p class="lead">The goal is simple: find the moments people usually keep to themselves and tell them with honesty, dignity and a cinematic visual language.</p></section>
 
-    <section id="contact" class="section contact">
-      <p class="eyebrow">STAY CONNECTED</p>
-      <h2>Something worth seeing is coming.</h2>
-      <p class="lead">Follow UNLOCKED ARC as the story unfolds.</p>
-      <a class="button primary" href="https://www.youtube.com/@unlockedArcMedia" target="_blank" rel="noopener">Visit YouTube</a>
-    </section>
-  </main>
-
-  <footer>
-    <div class="logo">UNLOCKED <span>ARC</span></div>
-    <p>© 2026 UNLOCKED ARC. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+<section id="contact" class="section"><p class="eyebrow">CONTACT</p><h2>Want to work with us?</h2><p class="lead">For collaborations, story submissions or general enquiries:</p>
+<div class="contact"><div><b>Email</b><br><a href="mailto:YOUR-EMAIL@example.com">YOUR-EMAIL@example.com</a></div>
+<div><b>WhatsApp / Phone</b><br><a href="tel:+000000000000">+00 000 000 0000</a></div></div>
+<p class="note">Replace these placeholders with your official UNLOCKED ARC contact details.</p></section>
+</main>
+<footer><span class="logo"><img src="unlocked-arc-logo.png" alt="UNLOCKED ARC logo"></span><span>© 2026 UNLOCKED ARC. Real stories. Told with respect.</span></footer>
+</body></html>
