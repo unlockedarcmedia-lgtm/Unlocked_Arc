@@ -1,132 +1,1345 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Farm Boy Who Filled Stadiums | Unlocked Arc</title>
-<meta name="description" content="A true story of Billy Graham and the lives that turned a page. Every chapter is an unlocked arc.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-<style>
-:root{--mist:#EEF3F7;--ink:#16324F;--dawn:#E8A33D;--sea:#3F6E8C;--paper:#FFFFFF;--line:#C9D7E2}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--mist);color:var(--ink);font:18px/1.7 "Source Sans 3",system-ui,sans-serif}
-h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.2;margin:0}
-.hero{text-align:center;padding:56px 20px 8px}
-.hero svg{width:min(340px,80%);height:auto}
-.hero h1{font-size:clamp(2rem,6vw,3.2rem);margin:12px auto 10px;max-width:16ch}
-.hero p{max-width:46ch;margin:0 auto;color:var(--sea)}
-main{max-width:680px;margin:0 auto;padding:24px 20px 64px}
-section{margin-top:44px}
-h2{font-size:1.65rem;margin-bottom:12px;padding-left:14px;border-left:5px solid var(--dawn)}
-p{margin:0 0 16px}
-.note{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:.98rem}
-.arc{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:18px}
-.arc h3{font-size:1.25rem;margin-bottom:8px}
-.close{background:var(--ink);color:#fff;border-radius:16px;padding:28px 26px;margin-top:48px}
-.close h2{border-color:var(--dawn);color:#fff}
-.facts{margin:0;padding-left:20px}
-.facts li{margin-bottom:6px}
-a{color:var(--sea)}
-a:focus-visible{outline:3px solid var(--dawn);outline-offset:3px}
-footer{text-align:center;padding:0 20px 40px;color:var(--sea);font-size:.95rem}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Farm Boy Who Filled Stadiums — UNLOCKED ARC</title>
+
+  <meta name="description" content="The story of Billy Graham — from a dairy farm outside Charlotte to stadiums and audiences around the world. A UNLOCKED ARC story.">
+
+  <meta name="author" content="UNLOCKED ARC">
+
+  <link rel="canonical" href="https://unlockedarcmedia-lgtm.github.io/Unlocked_Arc/story.html">
+
+  <meta property="og:title" content="The Farm Boy Who Filled Stadiums — UNLOCKED ARC">
+  <meta property="og:description" content="Every life has an untold arc. The story of Billy Graham.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://unlockedarcmedia-lgtm.github.io/Unlocked_Arc/story.html">
+
+  <style>
+    :root {
+      --bg: #08090a;
+      --bg-soft: #101214;
+      --card: #121416;
+      --text: #f2f0eb;
+      --muted: #a6a6a1;
+      --line: rgba(255,255,255,0.11);
+      --accent: #d8c9a3;
+      --max: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: #08090a;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 24px 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(
+        to bottom,
+        rgba(8,9,10,0.96),
+        rgba(8,9,10,0)
+      );
+    }
+
+    .brand {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+    }
+
+    .back {
+      font-size: 12px;
+      color: #c7c7c3;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: 0.3s ease;
+    }
+
+    .back:hover {
+      color: white;
+      transform: translateX(-4px);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      padding: 150px 6vw 90px;
+      overflow: hidden;
+      background:
+        radial-gradient(
+          circle at 75% 25%,
+          rgba(216,201,163,0.11),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 15% 70%,
+          rgba(255,255,255,0.035),
+          transparent 30%
+        ),
+        #08090a;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 700px;
+      height: 700px;
+      right: -250px;
+      top: -250px;
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      right: -150px;
+      top: -150px;
+      border: 1px solid rgba(216,201,163,0.06);
+      border-radius: 50%;
+    }
+
+    .hero-inner {
+      width: 100%;
+      max-width: var(--max);
+      margin: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .hero h1 {
+      max-width: 1000px;
+      font-size: clamp(58px, 10vw, 132px);
+      line-height: 0.91;
+      font-weight: 500;
+      letter-spacing: -0.055em;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: #bdbdb8;
+    }
+
+    .hero-subtitle {
+      max-width: 650px;
+      margin-top: 38px;
+      color: #b4b4af;
+      font-size: clamp(17px, 2vw, 22px);
+      line-height: 1.6;
+    }
+
+    .hero-meta {
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 35px;
+      color: #858580;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .hero-meta strong {
+      display: block;
+      color: #deded9;
+      font-weight: 500;
+      margin-top: 7px;
+      letter-spacing: 0.08em;
+    }
+
+    /* STORY INTRO */
+
+    .intro {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 130px 6vw 100px;
+    }
+
+    .intro-number {
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0.25em;
+      margin-bottom: 25px;
+    }
+
+    .intro p {
+      font-size: clamp(25px, 4vw, 46px);
+      line-height: 1.28;
+      letter-spacing: -0.025em;
+      color: #deddd8;
+    }
+
+    /* CHAPTERS */
+
+    .story {
+      width: 100%;
+    }
+
+    .chapter {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 110px 6vw;
+      border-top: 1px solid var(--line);
+    }
+
+    .chapter-grid {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 70px;
+    }
+
+    .chapter-label {
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding-top: 10px;
+    }
+
+    .chapter-label span {
+      display: block;
+      font-size: 42px;
+      letter-spacing: -0.05em;
+      color: rgba(255,255,255,0.16);
+      margin-bottom: 10px;
+    }
+
+    .chapter-content h2 {
+      font-size: clamp(35px, 5vw, 68px);
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: -0.045em;
+      margin-bottom: 38px;
+    }
+
+    .chapter-content p {
+      max-width: 780px;
+      color: #b4b4af;
+      font-size: 17px;
+      line-height: 1.9;
+      margin-bottom: 22px;
+    }
+
+    .chapter-content p strong {
+      color: #e3e2dc;
+      font-weight: 500;
+    }
+
+    /* PULL QUOTE */
+
+    .pull {
+      max-width: 850px;
+      margin: 50px 0;
+      padding: 35px 0 35px 35px;
+      border-left: 1px solid var(--accent);
+    }
+
+    .pull p {
+      font-size: clamp(25px, 4vw, 43px);
+      line-height: 1.3;
+      color: #e4e2da;
+      margin: 0;
+    }
+
+    /* TIMELINE */
+
+    .timeline-section {
+      background: var(--bg-soft);
+      padding: 120px 6vw;
+    }
+
+    .timeline-inner {
+      max-width: var(--max);
+      margin: auto;
+    }
+
+    .section-kicker {
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      font-size: clamp(40px, 7vw, 82px);
+      line-height: 0.98;
+      font-weight: 500;
+      letter-spacing: -0.05em;
+      margin-bottom: 70px;
+    }
+
+    .timeline {
+      border-left: 1px solid rgba(255,255,255,0.16);
+      margin-left: 8px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 55px 45px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -4px;
+      top: 7px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .timeline-year {
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      margin-bottom: 8px;
+    }
+
+    .timeline-item h3 {
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .timeline-item p {
+      max-width: 700px;
+      color: #999995;
+      font-size: 15px;
+    }
+
+    /* FACTS */
+
+    .facts {
+      max-width: var(--max);
+      margin: auto;
+      padding: 120px 6vw;
+    }
+
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin-top: 55px;
+    }
+
+    .fact {
+      background: var(--bg);
+      padding: 35px;
+      min-height: 150px;
+    }
+
+    .fact-number {
+      color: var(--accent);
+      font-size: 27px;
+      margin-bottom: 8px;
+    }
+
+    .fact-label {
+      color: #8f8f8a;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    /* REFLECTION */
+
+    .reflection {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      padding: 130px 6vw;
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(216,201,163,0.08),
+          transparent 45%
+        ),
+        #08090a;
+    }
+
+    .reflection-inner {
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .reflection-small {
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      margin-bottom: 35px;
+    }
+
+    .reflection h2 {
+      font-size: clamp(43px, 7vw, 88px);
+      line-height: 1.02;
+      font-weight: 400;
+      letter-spacing: -0.05em;
+    }
+
+    .reflection h2 span {
+      color: #858580;
+    }
+
+    .reflection p {
+      max-width: 700px;
+      margin: 45px auto 0;
+      color: #a6a6a1;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* SOURCES */
+
+    .sources {
+      max-width: var(--max);
+      margin: auto;
+      padding: 100px 6vw;
+      border-top: 1px solid var(--line);
+    }
+
+    .sources h2 {
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    .sources p {
+      max-width: 750px;
+      color: #888884;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .source-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .source-list a {
+      color: #c9c9c4;
+      font-size: 13px;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      padding-bottom: 10px;
+      transition: 0.3s ease;
+    }
+
+    .source-list a:hover {
+      color: white;
+      padding-left: 8px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 45px 6vw;
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      flex-wrap: wrap;
+      color: #666662;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    footer strong {
+      color: #aaa9a4;
+      font-weight: 600;
+    }
+
+    /* REVEAL ANIMATION */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition:
+        opacity 1s ease,
+        transform 1s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      nav {
+        padding: 20px 6vw;
+      }
+
+      .brand {
+        font-size: 11px;
+        letter-spacing: 0.2em;
+      }
+
+      .back {
+        font-size: 10px;
+      }
+
+      .hero {
+        min-height: 90vh;
+        padding: 130px 7vw 70px;
+      }
+
+      .hero h1 {
+        font-size: clamp(53px, 16vw, 90px);
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+      }
+
+      .hero-meta {
+        gap: 22px;
+      }
+
+      .intro {
+        padding: 90px 7vw 70px;
+      }
+
+      .chapter {
+        padding: 80px 7vw;
+      }
+
+      .chapter-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .chapter-label {
+        padding-top: 0;
+      }
+
+      .chapter-label span {
+        display: inline;
+        font-size: 25px;
+        margin-right: 10px;
+      }
+
+      .chapter-content h2 {
+        margin-bottom: 25px;
+      }
+
+      .chapter-content p {
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .pull {
+        padding-left: 22px;
+        margin: 40px 0;
+      }
+
+      .timeline-section,
+      .facts,
+      .sources {
+        padding: 85px 7vw;
+      }
+
+      .facts-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .reflection {
+        min-height: 75vh;
+        padding: 100px 7vw;
+      }
+
+      footer {
+        padding: 35px 7vw;
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header class="hero">
-  <svg viewBox="0 0 340 190" role="img" aria-label="A glowing arc opening like a sunrise">
-    <path d="M30 175 A140 140 0 0 1 310 175" fill="none" stroke="#16324F" stroke-width="10" stroke-linecap="round"/>
-    <path d="M75 175 A95 95 0 0 1 265 175" fill="none" stroke="#3F6E8C" stroke-width="8" stroke-linecap="round"/>
-    <path d="M120 175 A50 50 0 0 1 220 175" fill="none" stroke="#E8A33D" stroke-width="8" stroke-linecap="round"/>
-    <circle cx="170" cy="150" r="14" fill="#E8A33D"/>
-  </svg>
-  <h1>The Farm Boy Who Filled Stadiums</h1>
-  <p>A true story about Billy Graham, and the lives that turned a page. Every chapter here is an unlocked arc.</p>
-</header>
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html" class="brand">UNLOCKED ARC</a>
+    <a href="index.html#stories" class="back">← Back to stories</a>
+  </nav>
 
-<main>
 
-<section>
-  <h2>A quiet beginning</h2>
-  <p>In 1918, on a dairy farm outside Charlotte, North Carolina, a boy named William Franklin Graham Jr. was born. His days were early mornings, cows, and chores. Nobody looking at that farm would have guessed this ordinary boy would one day speak to more people than almost anyone in history.</p>
-  <p>As a teenager he loved baseball and dreamed of playing it. Then, at sixteen, a traveling revival came to Charlotte. He went out of curiosity. He later described that season as the turning point of his life.</p>
-</section>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner reveal">
 
-<section>
-  <h2>The gamble nobody expected</h2>
-  <p>He studied, married Ruth Bell, the daughter of medical missionaries who grew up in China, and began preaching. In 1949, at thirty, he held a tent meeting in Los Angeles. It was planned for three weeks and few thought it would matter.</p>
-  <p>Then the story turned. Newspaper publisher William Randolph Hearst reportedly told his editors to "puff" the young preacher. Front pages across America carried his name, the crowds swelled, and three weeks stretched into eight. An unknown became a household name almost overnight.</p>
-</section>
+      <div class="eyebrow">
+        The Untold Arc — Story 01
+      </div>
 
-<section>
-  <h2>The moment of choice</h2>
-  <p>Fame tested him early. In 1953, in Chattanooga, Tennessee, the audience was seated separated by race, as was common in the South. Graham walked over and removed the ropes dividing the crowd himself. From then on, he insisted his gatherings be open to everyone, at a time when that took real courage.</p>
-</section>
+      <h1>
+        The Farm Boy
+        <span>Who Filled</span>
+        <span>Stadiums</span>
+      </h1>
 
-<section>
-  <h2>Crossing the walls</h2>
-  <p>The world was split by the Cold War, yet Graham kept traveling, including behind the Iron Curtain. In 1973 in Seoul, South Korea, well over a million people gathered for one service, among the largest crowds ever recorded at a religious event. His ministry says he preached in person to hundreds of millions of people in more than 180 countries and territories.</p>
-</section>
+      <p class="hero-subtitle">
+        A quiet beginning on a dairy farm. A life shaped by faith.
+        A voice that eventually reached millions around the world.
+      </p>
 
-<section>
-  <h2>The hard part of the story</h2>
-  <p>Real life is not only triumph. Graham advised presidents from Truman to Obama, and closeness to power has a cost. Recordings released years later captured a private 1972 conversation with President Nixon in which he made remarks that were widely condemned. He publicly apologized. He was a flawed person who owned a mistake, and that honesty is part of why many still respect him.</p>
-  <p>He also set up his ministry's finances with independent oversight, so no one could say he chased money.</p>
-</section>
+      <div class="hero-meta">
 
-<section>
-  <h2>The long goodbye</h2>
-  <p>Ruth passed away in 2007. Graham, slowed by age and illness, lived quietly in the mountains of North Carolina. He died at home in February 2018, at 99. In an honor almost no private citizen receives, his body lay in the U.S. Capitol Rotunda, where lines of ordinary people came to say goodbye.</p>
-</section>
+        <div>
+          UNLOCKED ARC
+          <strong>STORY 01</strong>
+        </div>
 
-<section>
-  <h2>Unlocked arcs: lives that turned a page</h2>
-  <p>Graham's 1949 Los Angeles meetings did not just fill a tent. According to the people involved, they changed the direction of very different lives.</p>
+        <div>
+          LIFE
+          <strong>1918 — 2018</strong>
+        </div>
 
-  <div class="arc">
-    <h3>The runner who survived the impossible</h3>
-    <p>Louis Zamperini ran in the 1936 Berlin Olympics. In World War II his bomber crashed into the Pacific. He drifted on a raft for 47 days, then endured brutal treatment in Japanese prison camps. Home again, he struggled with nightmares, anger, and heavy drinking. His wife persuaded him to attend a Graham meeting, and he said that night began his healing. Years later he traveled to Japan and said he forgave the men who had guarded him. He lived to 97, and his life became the book and film <em>Unbroken</em>.</p>
-  </div>
+        <div>
+          ARC
+          <strong>Faith · Courage · Legacy</strong>
+        </div>
 
-  <div class="arc">
-    <h3>The man who listened in on secrets</h3>
-    <p>Jim Vaus was a wiretapper who worked for the gangster Mickey Cohen. He went to the 1949 meetings out of curiosity and left a changed man. He gave up that life and spent years working with troubled young people.</p>
-  </div>
+      </div>
 
-  <div class="arc">
-    <h3>The singing cowboy</h3>
-    <p>Stuart Hamblen was a popular radio star known for hard living. After the 1949 meetings he said he gave up drinking and gambling, then wrote the gospel song "It Is No Secret," inspired by his own turnaround.</p>
-  </div>
+    </div>
+  </header>
 
-  <p class="note">These are accounts as told by the people themselves and in published biographies. We share them as their stories, not as proof of anything.</p>
-</section>
 
-<section class="close">
-  <h2>What this story leaves us with</h2>
-  <p>Behind the stadiums and headlines was a farm boy who kept showing up, even when it was uncomfortable, and who admitted when he was wrong. You do not need to be famous, perfect, or powerful to leave something good behind.</p>
-  <p>An Olympian, a wiretapper, and a country singer had almost nothing in common except this: each reached a point where the old chapter was over. Nobody gets to rewrite the past, but everyone gets to decide what the next page says.</p>
-  <p>However big or small your story feels today, it is still being written. You are not behind, and you are not too late. You are safe to begin again.</p>
-</section>
+  <!-- INTRO -->
+  <section class="intro reveal">
 
-<section>
-  <h2>Quick facts</h2>
-  <ul class="facts">
-    <li>Born 1918 near Charlotte, North Carolina; died 2018 at age 99.</li>
-    <li>Rose to national fame after the 1949 Los Angeles meetings.</li>
-    <li>Removed racial seating ropes at a 1953 Chattanooga event.</li>
-    <li>Preached in more than 180 countries and territories, according to his ministry.</li>
-    <li>Lay in honor in the U.S. Capitol Rotunda in 2018.</li>
-  </ul>
-</section>
+    <div class="intro-number">
+      00 — BEFORE THE STADIUMS
+    </div>
 
-</main>
+    <p>
+      Before the crowds, the cameras and the stadiums,
+      there was simply a boy growing up on a dairy farm
+      outside Charlotte, North Carolina.
+    </p>
 
-<footer>
-  <a href="index.html">Back to Unlocked Arc</a>
-</footer>
+  </section>
+
+
+  <!-- STORY -->
+  <main class="story">
+
+
+    <!-- CHAPTER 01 -->
+    <section class="chapter">
+
+      <div class="chapter-grid">
+
+        <div class="chapter-label">
+          <span>01</span>
+          The Beginning
+        </div>
+
+        <div class="chapter-content reveal">
+
+          <h2>A Quiet Beginning</h2>
+
+          <p>
+            William Franklin “Billy” Graham Jr. was born on
+            November 7, 1918, and raised on a dairy farm outside
+            Charlotte, North Carolina.
+          </p>
+
+          <p>
+            His childhood was shaped by farm work and the realities
+            of growing up during the Depression. Nothing about that
+            setting suggested that the boy would eventually become
+            one of the most widely known evangelists of the twentieth
+            century.
+          </p>
+
+          <p>
+            As a teenager, Graham was interested in baseball.
+            But in the fall of 1934, when he was 15, he attended a
+            series of revival meetings led by traveling evangelist
+            Mordecai Ham in Charlotte.
+          </p>
+
+          <p>
+            On November 1, 1934, Graham made a personal commitment
+            to Christ. According to his own ministry's historical
+            record, that decision became a defining turning point
+            in his life.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CHAPTER 02 -->
+    <section class="chapter">
+
+      <div class="chapter-grid">
+
+        <div class="chapter-label">
+          <span>02</span>
+          The Direction
+        </div>
+
+        <div class="chapter-content reveal">
+
+          <h2>The Road to Preaching</h2>
+
+          <p>
+            Graham later studied at Florida Bible Institute,
+            where he developed his commitment to preaching.
+            He then attended Wheaton College in Illinois,
+            graduating in 1943.
+          </p>
+
+          <p>
+            At Wheaton he met Ruth McCue Bell, the daughter of
+            medical missionaries who had spent much of her childhood
+            in China. They married on August 13, 1943.
+          </p>
+
+          <p>
+            Graham pastored churches before joining Youth for Christ,
+            a Christian organization focused particularly on young
+            people and servicemen. He began preaching across the
+            United States and Europe.
+          </p>
+
+          <div class="pull">
+            <p>
+              The road was not planned around fame.
+              It was built one step at a time.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CHAPTER 03 -->
+    <section class="chapter">
+
+      <div class="chapter-grid">
+
+        <div class="chapter-label">
+          <span>03</span>
+          The Turning Point
+        </div>
+
+        <div class="chapter-content reveal">
+
+          <h2>The Gamble Nobody Expected</h2>
+
+          <p>
+            In September 1949, Graham began a citywide evangelistic
+            campaign in Los Angeles.
+          </p>
+
+          <p>
+            It was originally scheduled to last three weeks.
+            Instead, the meetings continued for more than eight weeks,
+            as crowds repeatedly filled the large tent known as the
+            “Canvas Cathedral.”
+          </p>
+
+          <p>
+            Newspapers began covering the meetings, bringing Graham
+            national attention. Historical accounts also associate
+            the campaign with newspaper publisher William Randolph
+            Hearst and increased press coverage, although accounts
+            differ on the precise circumstances behind that coverage.
+          </p>
+
+          <p>
+            Whatever the individual factors, the Los Angeles campaign
+            became the breakthrough that moved Graham from a rising
+            young preacher into national prominence.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CHAPTER 04 -->
+    <section class="chapter">
+
+      <div class="chapter-grid">
+
+        <div class="chapter-label">
+          <span>04</span>
+          The Barrier
+        </div>
+
+        <div class="chapter-content reveal">
+
+          <h2>Crossing the Lines</h2>
+
+          <p>
+            Fame did not remove the divisions of the world around him.
+          </p>
+
+          <p>
+            In 1953, during a crusade in Chattanooga, Tennessee,
+            Graham encountered segregated seating. According to the
+            Billy Graham Evangelistic Association's historical record,
+            he reached a breaking point when an usher insisted on
+            keeping the audience separated.
+          </p>
+
+          <p>
+            Graham removed the ropes dividing the sections himself.
+            His ministry subsequently records the ending of segregated
+            seating at his crusades.
+          </p>
+
+          <div class="pull">
+            <p>
+              Sometimes a story changes direction
+              when someone refuses to leave a barrier standing.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CHAPTER 05 -->
+    <section class="chapter">
+
+      <div class="chapter-grid">
+
+        <div class="chapter-label">
+          <span>05</span>
+          The World
+        </div>
+
+        <div class="chapter-content reveal">
+
+          <h2>Crossing the Walls</h2>
+
+          <p>
+            Graham's ministry eventually crossed national, cultural
+            and political boundaries.
+          </p>
+
+          <p>
+            During the Cold War era and the decades that followed,
+            he preached in countries across the world, including
+            places behind the former Iron Curtain.
+          </p>
+
+          <p>
+            In 1973, he preached in Seoul, South Korea, where the
+            closing service drew more than one million people.
+            The Billy Graham Memorial records the attendance at more
+            than 1.1 million.
+          </p>
+
+          <p>
+            Across his lifetime, the Billy Graham Evangelistic
+            Association says Graham preached to nearly 215 million
+            people in live audiences in more than 185 countries and
+            territories. His ministry also reached many more through
+            television, radio, film, video and later digital media.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CHAPTER 06 -->
+    <section class="chapter">
+
+      <div class="chapter-grid">
+
+        <div class="chapter-label">
+          <span>06</span>
+          The Human Side
+        </div>
+
+        <div class="chapter-content reveal">
+
+          <h2>The Hard Part of the Story</h2>
+
+          <p>
+            A life story becomes less honest when it only records
+            victories.
+          </p>
+
+          <p>
+            Graham became a counselor and acquaintance of numerous
+            American presidents. His proximity to political power
+            also became part of the more complicated side of his
+            public life.
+          </p>
+
+          <p>
+            Recordings from a 1972 conversation with President
+            Richard Nixon later became public and drew criticism for
+            remarks Graham made about Jewish people and American
+            politics.
+          </p>
+
+          <p>
+            Graham later expressed regret and apologized for the
+            remarks. They remain part of the historical record and
+            are important to acknowledge when telling his story
+            honestly.
+          </p>
+
+          <p>
+            His ministry also established principles concerning
+            financial and moral integrity. The 1948 “Modesto Manifesto”
+            became an early framework for how his team approached
+            finances, cooperation and public ministry.
+          </p>
+
+          <div class="pull">
+            <p>
+              A meaningful life story does not require pretending
+              that a person was perfect.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CHAPTER 07 -->
+    <section class="chapter">
+
+      <div class="chapter-grid">
+
+        <div class="chapter-label">
+          <span>07</span>
+          The Long Goodbye
+        </div>
+
+        <div class="chapter-content reveal">
+
+          <h2>When the Stadiums Went Quiet</h2>
+
+          <p>
+            Ruth Bell Graham died in 2007 after nearly 64 years of
+            marriage.
+          </p>
+
+          <p>
+            In his later years, Graham lived quietly in the mountains
+            of western North Carolina as age and declining health
+            limited his public activity.
+          </p>
+
+          <p>
+            On February 21, 2018, Billy Graham died at the age of 99.
+          </p>
+
+          <p>
+            A few days later, he became only the fourth private citizen
+            to lie in honor in the U.S. Capitol Rotunda. His casket was
+            there from February 28 through March 1, 2018, where members
+            of the public came to pay their respects.
+          </p>
+
+          <p>
+            The stadiums were gone.
+            The microphones were silent.
+            But the story was not finished.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- TIMELINE -->
+  <section class="timeline-section">
+
+    <div class="timeline-inner reveal">
+
+      <div class="section-kicker">
+        The Arc
+      </div>
+
+      <h2 class="section-title">
+        A life in<br>
+        moments.
+      </h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-year">1918</div>
+          <h3>Born</h3>
+          <p>
+            William Franklin Graham Jr. is born in Charlotte,
+            North Carolina, and grows up on a dairy farm.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">1934</div>
+          <h3>The Turning Point</h3>
+          <p>
+            At age 15, Graham makes a personal commitment to Christ
+            during revival meetings led by Mordecai Ham.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">1943</div>
+          <h3>Ruth</h3>
+          <p>
+            Graham graduates from Wheaton College and marries
+            Ruth McCue Bell.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">1949</div>
+          <h3>Los Angeles</h3>
+          <p>
+            A three-week campaign stretches beyond eight weeks and
+            launches Graham into national prominence.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">1953</div>
+          <h3>Chattanooga</h3>
+          <p>
+            Graham removes ropes separating Black and white sections
+            during a crusade.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">1973</div>
+          <h3>Seoul</h3>
+          <p>
+            More than one million people gather for the closing service
+            of the Korea Crusade.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2007</div>
+          <h3>Ruth</h3>
+          <p>
+            Ruth Bell Graham dies after nearly six and a half decades
+            of marriage.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2018</div>
+          <h3>Goodbye</h3>
+          <p>
+            Billy Graham dies at 99 and lies in honor in the U.S.
+            Capitol Rotunda.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FACTS -->
+  <section class="facts">
+
+    <div class="reveal">
+
+      <div class="section-kicker">
+        By The Numbers
+      </div>
+
+      <h2 class="section-title">
+        The scale of<br>
+        the journey.
+      </h2>
+
+      <div class="facts-grid">
+
+        <div class="fact">
+          <div class="fact-number">99</div>
+          <div class="fact-label">Years of life</div>
+        </div>
+
+        <div class="fact">
+          <div class="fact-number">185+</div>
+          <div class="fact-label">Countries & territories</div>
+        </div>
+
+        <div class="fact">
+          <div class="fact-number">215M</div>
+          <div class="fact-label">Nearly 215 million in live audiences</div>
+        </div>
+
+        <div class="fact">
+          <div class="fact-number">1949</div>
+          <div class="fact-label">Los Angeles breakthrough</div>
+        </div>
+
+        <div class="fact">
+          <div class="fact-number">1973</div>
+          <div class="fact-label">Seoul — more than 1.1 million</div>
+        </div>
+
+        <div class="fact">
+          <div class="fact-number">2018</div>
+          <div class="fact-label">Capitol Rotunda honor</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- REFLECTION -->
+  <section class="reflection">
+
+    <div class="reflection-inner reveal">
+
+      <div class="reflection-small">
+        What this story leaves behind
+      </div>
+
+      <h2>
+        It didn't begin<br>
+        with the stadium.
+        <span>It began with<br>
+        one life.</span>
+      </h2>
+
+      <p>
+        Billy Graham's story began far away from the crowds —
+        on a farm, in a family, during an ordinary childhood.
+        Whatever someone thinks about his public legacy,
+        the shape of his life reminds us of something simple:
+        a beginning does not tell you how far a story can travel.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL ARC -->
+  <section class="reflection" style="min-height: 65vh;">
+
+    <div class="reflection-inner reveal">
+
+      <div class="reflection-small">
+        UNLOCKED ARC
+      </div>
+
+      <h2>
+        Some stories are never written.
+        <span>They are simply lived.</span>
+      </h2>
+
+      <p>
+        And sometimes, a life that begins quietly
+        leaves an echo far beyond the place where it began.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- SOURCES -->
+  <section class="sources">
+
+    <div class="reveal">
+
+      <div class="section-kicker">
+        Historical Sources
+      </div>
+
+      <h2>
+        This story is based on documented history.
+      </h2>
+
+      <p>
+        UNLOCKED ARC aims to tell real stories with honesty and respect.
+        The following sources were used to verify the major dates,
+        events and historical details in this story.
+      </p>
+
+      <div class="source-list">
+
+        <a
+          href="https://memorial.billygraham.org/biography/"
+          target="_blank"
+          rel="noopener noreferrer">
+          Billy Graham Memorial — Biography ↗
+        </a>
+
+        <a
+          href="https://memorial.billygraham.org/ministry-timeline/"
+          target="_blank"
+          rel="noopener noreferrer">
+          Billy Graham Memorial — Ministry Timeline ↗
+        </a>
+
+        <a
+          href="https://billygraham.org/billy-graham"
+          target="_blank"
+          rel="noopener noreferrer">
+          Billy Graham Evangelistic Association — Biography ↗
+        </a>
+
+        <a
+          href="https://www.visitthecapitol.gov/apps/nshc/statue/graham/"
+          target="_blank"
+          rel="noopener noreferrer">
+          U.S. Capitol Visitor Center — Billy Graham ↗
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div>
+      <strong>UNLOCKED ARC</strong>
+    </div>
+
+    <div>
+      Every life has an untold arc.
+    </div>
+
+    <div>
+      © 2026 UNLOCKED ARC
+    </div>
+
+  </footer>
+
+
+  <!-- SIMPLE SCROLL REVEAL -->
+  <script>
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    const observer =
+      new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+    revealElements.forEach((element) => {
+      observer.observe(element);
+    });
+
+  </script>
 
 </body>
 </html>
