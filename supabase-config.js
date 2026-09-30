@@ -1,4 +1,4 @@
 window.UNLOCKED_ARC_SUPABASE = {
-  url: "https://YOUR-PROJECT.supabase.co",
-  anonKey: "YOUR-PUBLISHABLE-OR-ANON-KEY"
+  url: "https://orlrwfpxijtfcwmznazr.supabase.co",
+  anonKey: "sb_publishable_iDA3NTNHy32suLz-qzg67A_uAcD6-dg"
 };
