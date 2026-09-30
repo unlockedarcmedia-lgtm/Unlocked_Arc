@@ -56,7 +56,7 @@
 
 <section id="share" class="section form-section"><p class="eyebrow">SHARE YOUR STORY</p><h2>What happened to you?</h2>
 <p class="lead">Tell us the story behind the moment. You can use your real name or ask us to keep your identity private.</p>
-<form action="#" method="post" enctype="multipart/form-data">
+<form id="story-form" method="post" enctype="multipart/form-data">
 <div class="grid"><label>Name<input name="name" placeholder="Your name"></label><label>Email<input type="email" name="email" placeholder="you@example.com" required></label></div>
 <div class="grid"><label>Country<input name="country" placeholder="Where are you from?"></label><label>Phone / WhatsApp (optional)<input type="tel" name="phone" placeholder="+1... / +91..."></label></div>
 <label>Your story<textarea name="story" rows="9" placeholder="Tell us what happened, what you felt, and what changed..." required></textarea></label>
@@ -64,7 +64,7 @@
 <label class="check"><input type="checkbox" name="private"> I would like my identity kept private if my story is selected.</label>
 <label class="check"><input type="checkbox" name="permission" required> I understand that UNLOCKED ARC may contact me about adapting my story into content. Submission does not guarantee publication.</label>
 <button class="btn" type="submit">Submit story</button>
-<p class="note">Please do not submit passwords, financial information, or emergency/crisis information.</p>
+<p id="story-form-message" class="note" role="status" aria-live="polite">Your submission is sent through the secure story system.</p>
 </form></section>
 
 <section id="about" class="section"><p class="eyebrow">ABOUT UNLOCKED ARC</p><h2>One world. Millions of stories.</h2>
@@ -76,4 +76,4 @@
 </section>
 </main>
 <footer><span class="logo"><img src="unlocked-arc-logo.png" alt="UNLOCKED ARC logo"></span><span>© 2026 UNLOCKED ARC. Real stories. Told with respect.</span></footer>
-</body></html>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="story-submit.js"></script></body></html>
