@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
+Disallow: /private/
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
 
 Sitemap: https://unlockedarcmedia-lgtm.github.io/Unlocked_Arc/sitemap.xml
