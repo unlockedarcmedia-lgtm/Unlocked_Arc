@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UNLOCKED ARC — a worldwide story project sharing real human stories through meaningful cinematic storytelling.">
+  <meta name="theme-color" content="#090a0b">
+  <title>UNLOCKED ARC — Every Life Has an Untold Arc</title>
+  <link rel="preload" as="image" href="unlocked-arc-banner.png">
+  <style>
+    :root{--bg:#08090a;--panel:#111315;--text:#f5f2eb;--muted:#a8aaa7;--line:rgba(255,255,255,.12);--accent:#d8c9a3;--max:1180px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.7;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    ::selection{background:var(--accent);color:#111}
+    .progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:2000}
+    .nav{position:fixed;top:0;left:0;width:100%;z-index:1500;padding:17px 5vw;display:flex;align-items:center;justify-content:space-between;gap:30px;background:rgba(8,9,10,.45);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.3s}
+    .nav.scrolled{background:rgba(8,9,10,.92);border-bottom-color:var(--line)}
+    .brand img{width:145px;height:auto}
+    .navlinks{display:flex;align-items:center;gap:25px}
+    .navlinks a{font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:#d6d6d1;transition:.25s}
+    .navlinks a:hover{color:#fff}
+    .admin-link{border:1px solid rgba(216,201,163,.65);padding:9px 13px;border-radius:999px;color:#f4e9cf!important;background:rgba(216,201,163,.07)}
+    .admin-link:hover{background:var(--accent);color:#111!important}
+    .menu{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:8px;padding:8px 11px;font-size:20px}
+    .hero{min-height:100vh;position:relative;display:flex;align-items:flex-end;overflow:hidden;background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.84)),url("unlocked-arc-banner.png") center/cover no-repeat}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.65),transparent 70%)}
+    .hero-content{position:relative;z-index:1;width:min(var(--max),90vw);margin:0 auto;padding:150px 0 90px}
+    .eyebrow{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+    h1{font-size:clamp(52px,8vw,112px);line-height:.94;letter-spacing:-.055em;font-weight:600;max-width:950px}
+    h1 em{font-family:Georgia,serif;font-weight:400}
+    .hero-lead{max-width:650px;color:#d2d2ce;font-size:18px;margin:28px 0 34px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:999px;border:1px solid var(--accent);background:var(--accent);color:#111;font-weight:700;font-size:12px;letter-spacing:.09em;text-transform:uppercase;transition:.25s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+    .btn.ghost{background:transparent;color:#f5f2eb;border-color:rgba(255,255,255,.3)}
+    .btn.ghost:hover{background:rgba(255,255,255,.1)}
+    .btn.admin{background:transparent;border-color:rgba(216,201,163,.8);color:#f3e7ca}
+    .section{width:min(var(--max),86vw);margin:auto;padding:115px 0}
+    .section h2{font-size:clamp(34px,5vw,65px);line-height:1.05;letter-spacing:-.035em;max-width:850px}
+    .lead{color:var(--muted);max-width:760px;font-size:17px;margin-top:24px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:55px}
+    .card{background:linear-gradient(145deg,#151719,#0e1011);border:1px solid var(--line);border-radius:18px;padding:30px;min-height:220px;transition:.3s}
+    .card:hover{transform:translateY(-5px);border-color:rgba(216,201,163,.4)}
+    .card small{color:var(--accent);letter-spacing:.18em}
+    .card h3{font-size:25px;margin:18px 0 10px}
+    .card p{color:var(--muted)}
+    .story-feature{margin-top:50px;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#0e1011;display:grid;grid-template-columns:1.1fr 1fr}
+    .story-visual{min-height:390px;background:radial-gradient(circle at 50% 35%,rgba(216,201,163,.2),transparent 42%),linear-gradient(145deg,#1a1b1b,#08090a);display:flex;align-items:flex-end;padding:32px}
+    .story-visual span{font-size:11px;letter-spacing:.2em;color:var(--accent)}
+    .story-copy{padding:50px}
+    .story-copy h3{font:400 clamp(34px,4vw,55px)/1.02 Georgia,serif}
+    .story-copy p{color:var(--muted);margin:20px 0 28px}
+    .manifesto{padding:150px 7vw;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:radial-gradient(circle,rgba(216,201,163,.08),transparent 50%)}
+    .manifesto p{font:400 clamp(34px,6vw,75px)/1.1 Georgia,serif;color:#e9e5dc}
+    .steps{counter-reset:step}
+    .step{display:grid;grid-template-columns:90px 1fr;gap:25px;padding:32px 0;border-bottom:1px solid var(--line)}
+    .step-num{color:var(--accent);font-size:13px;letter-spacing:.15em}
+    .step h3{font-size:25px;margin-bottom:5px}
+    .step p{color:var(--muted)}
+    .form-wrap{max-width:900px}
+    form{margin-top:42px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    label{display:block;color:#d9d8d2;font-size:13px;margin-bottom:17px}
+    input,textarea{width:100%;margin-top:8px;background:#101214;color:#fff;border:1px solid var(--line);border-radius:10px;padding:14px;font:inherit;outline:none}
+    input:focus,textarea:focus{border-color:rgba(216,201,163,.65)}
+    textarea{resize:vertical}
+    .check{display:flex;gap:10px;align-items:flex-start;color:var(--muted)}
+    .check input{width:auto;margin-top:5px}
+    .note{font-size:12px;color:#7f817f;margin-top:14px}
+    .youtube{border:1px solid var(--line);border-radius:22px;padding:55px;background:linear-gradient(145deg,#131516,#0b0c0d);display:flex;justify-content:space-between;align-items:center;gap:35px}
+    .youtube h2{font-size:clamp(30px,4vw,52px)}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+    .contact-card{padding:25px;border:1px solid var(--line);border-radius:15px;background:#101213}
+    .contact-card b{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent)}
+    .contact-card a{display:inline-block;margin-top:7px;color:#eee}
+    footer{border-top:1px solid var(--line);padding:45px 7vw;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:35px}
+    footer .logo img{width:150px}
+    footer p,footer a{color:#858784;font-size:13px}
+    footer h4{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+    .footer-links{display:flex;flex-direction:column;gap:8px}
+    .admin-footer{display:inline-flex;align-items:center;gap:7px;color:#e8dcc0!important}
+    .top{position:fixed;right:22px;bottom:22px;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:rgba(10,11,12,.88);color:#fff;display:none;place-items:center;z-index:1000}
+    .reveal{opacity:0;transform:translateY(24px);transition:.8s ease}
+    .reveal.visible{opacity:1;transform:none}
+    @media(max-width:900px){
+      .navlinks{display:none;position:absolute;top:72px;left:4vw;right:4vw;background:rgba(9,10,11,.98);border:1px solid var(--line);border-radius:15px;padding:18px;flex-direction:column;align-items:stretch}
+      .navlinks.open{display:flex}.navlinks a{padding:10px}.menu{display:block}
+      .cards,.story-feature,.contact,footer{grid-template-columns:1fr}
+      .story-copy{padding:35px}.story-visual{min-height:250px}.youtube{display:block}.youtube .btn{margin-top:25px}
+    }
+    @media(max-width:600px){
+      .hero-content{padding-bottom:65px}.hero-lead{font-size:16px}.grid{grid-template-columns:1fr}.section{padding:85px 0}
+      .manifesto{padding:100px 7vw}.step{grid-template-columns:55px 1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#home" aria-label="UNLOCKED ARC home">
+      <img src="unlocked-arc-logo.png" alt="UNLOCKED ARC">
+    </a>
+    <button class="menu" id="menu" aria-label="Open menu">☰</button>
+    <nav class="navlinks" id="navlinks">
+      <a href="stories.html">Story Book</a>
+      <a href="#share">Share Your Story</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.youtube.com/@unlockedArcMedia" target="_blank" rel="noopener">YouTube ↗</a>
+      <a class="admin-link" href="https://unlockedarcmedia-lgtm.github.io/Unlocked_Arc/admin/">🔐 Admin Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content reveal">
+        <p class="eyebrow">A WORLDWIDE STORY PROJECT</p>
+        <h1>Every life has<br><em>an untold arc.</em></h1>
+        <p class="hero-lead">UNLOCKED ARC collects real human stories from around the world and transforms meaningful moments into cinematic stories that can travel far beyond where they began.</p>
+        <div class="actions">
+          <a class="btn" href="stories.html">Explore Story Book</a>
+          <a class="btn ghost" href="#share">Share Your Story</a>
+          <a class="btn admin" href="https://unlockedarcmedia-lgtm.github.io/Unlocked_Arc/admin/">🔐 Admin Login</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="stories">
+      <p class="eyebrow">THE STORY BOOK</p>
+      <h2>Real stories deserve to be remembered.</h2>
+      <p class="lead">Every story has a beginning, a turning point and an arc. Explore the stories already unlocked, then help us discover the next one.</p>
+      <div class="story-feature">
+        <div class="story-visual"><span>UNLOCKED ARC · STORY 01</span></div>
+        <div class="story-copy">
+          <p class="eyebrow">FEATURED STORY</p>
+          <h3>The Farm Boy Who Filled Stadiums</h3>
+          <p>A quiet beginning on a dairy farm. A life shaped by faith. A voice that eventually reached millions around the world.</p>
+          <a class="btn" href="story.html">Read Full Story</a>
+        </div>
+      </div>
+      <div style="margin-top:22px"><a class="btn ghost" href="stories.html">Open the Complete Story Book →</a></div>
+    </section>
+
+    <section class="manifesto reveal">
+      <p>“Some stories are never written.<br>They are simply lived.”</p>
+    </section>
+
+    <section class="section reveal">
+      <p class="eyebrow">HOW IT WORKS</p>
+      <h2>From a lived moment to a story that travels.</h2>
+      <div class="steps">
+        <div class="step"><div class="step-num">01</div><div><h3>Tell us</h3><p>Share what happened in your own words. It does not need to be polished.</p></div></div>
+        <div class="step"><div class="step-num">02</div><div><h3>We find the arc</h3><p>We look for the human heart of the experience — the struggle, choice, change or realization.</p></div></div>
+        <div class="step"><div class="step-num">03</div><div><h3>We tell it with care</h3><p>With appropriate permission, a real experience can become meaningful cinematic or animated content.</p></div></div>
+        <div class="step"><div class="step-num">04</div><div><h3>It travels</h3><p>A story from one person can give perspective, courage or hope to someone thousands of miles away.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="share">
+      <div class="form-wrap">
+        <p class="eyebrow">SHARE YOUR STORY</p>
+        <h2>What happened to you?</h2>
+        <p class="lead">You can use your real name or ask us to keep your identity private. Please share only information you are comfortable submitting.</p>
+        <form action="#" method="post" enctype="multipart/form-data">
+          <div class="grid">
+            <label>Name<input name="name" placeholder="Your name" autocomplete="name"></label>
+            <label>Email<input type="email" name="email" placeholder="you@example.com" required autocomplete="email"></label>
+          </div>
+          <div class="grid">
+            <label>Country<input name="country" placeholder="Where are you from?"></label>
+            <label>Phone / WhatsApp (optional)<input type="tel" name="phone" placeholder="+91..."></label>
+          </div>
+          <label>Your story<textarea name="story" rows="9" placeholder="Tell us what happened, what you felt, and what changed..." required></textarea></label>
+          <label>Photo (optional)<input type="file" name="photo" accept="image/*"></label>
+          <label class="check"><input type="checkbox" name="private"> <span>I would like my identity kept private if my story is selected.</span></label>
+          <label class="check"><input type="checkbox" name="permission" required> <span>I understand that UNLOCKED ARC may contact me about adapting my story into content. Submission does not guarantee publication.</span></label>
+          <button class="btn" type="submit">Submit Story</button>
+          <p class="note">Please do not submit passwords, financial information, or emergency/crisis information.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section reveal" id="about">
+      <p class="eyebrow">ABOUT UNLOCKED ARC</p>
+      <h2>One world. Millions of stories.</h2>
+      <p class="lead">UNLOCKED ARC is a worldwide story project built around a simple idea: every life contains an arc worth understanding. We collect real human experiences and develop them into meaningful, respectful storytelling.</p>
+    </section>
+
+    <section class="section reveal">
+      <div class="youtube">
+        <div>
+          <p class="eyebrow">UNLOCKED ARC ON YOUTUBE</p>
+          <h2>Watch the stories come alive.</h2>
+          <p class="lead">Follow UNLOCKED ARC for cinematic stories, human experiences, reflections and new arcs from around the world.</p>
+        </div>
+        <a class="btn" href="https://www.youtube.com/@unlockedArcMedia" target="_blank" rel="noopener">Visit YouTube ↗</a>
+      </div>
+    </section>
+
+    <section class="section reveal" id="contact">
+      <p class="eyebrow">CONTACT</p>
+      <h2>Have a story, idea or collaboration?</h2>
+      <p class="lead">For story submissions, collaborations and general enquiries, reach UNLOCKED ARC directly.</p>
+      <div class="contact">
+        <div class="contact-card"><b>Email</b><br><a href="mailto:unlockedarc.media@gmail.com">unlockedarc.media@gmail.com</a></div>
+        <div class="contact-card"><b>Story Book</b><br><a href="stories.html">Explore published stories →</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <a class="logo" href="#home"><img src="unlocked-arc-logo.png" alt="UNLOCKED ARC"></a>
+      <p style="margin-top:18px">Every life has an untold arc.</p>
+      <p style="margin-top:8px">© 2026 UNLOCKED ARC. Real stories. Told with respect.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <div class="footer-links">
+        <a href="stories.html">Story Book</a>
+        <a href="#share">Share Your Story</a>
+        <a href="#about">About UNLOCKED ARC</a>
+        <a href="https://www.youtube.com/@unlockedArcMedia" target="_blank" rel="noopener">YouTube ↗</a>
+      </div>
+    </div>
+    <div>
+      <h4>Secure Access</h4>
+      <div class="footer-links">
+        <a class="admin-footer" href="https://unlockedarcmedia-lgtm.github.io/Unlocked_Arc/admin/">🔐 Admin Login →</a>
+        <p>Authorized administration area.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="top" id="top" href="#home" aria-label="Back to top">↑</a>
+
+  <script>
+    const nav=document.getElementById('nav');
+    const progress=document.getElementById('progress');
+    const topBtn=document.getElementById('top');
+    const menu=document.getElementById('menu');
+    const navlinks=document.getElementById('navlinks');
+
+    function onScroll(){
+      const y=window.scrollY;
+      nav.classList.toggle('scrolled',y>30);
+      topBtn.style.display=y>650?'grid':'none';
+      const h=document.documentElement.scrollHeight-window.innerHeight;
+      progress.style.width=(h>0?(y/h)*100:0)+'%';
+    }
+    window.addEventListener('scroll',onScroll,{passive:true});
+    onScroll();
+
+    menu.addEventListener('click',()=>navlinks.classList.toggle('open'));
+    navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navlinks.classList.remove('open')));
+
+    const observer=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}});
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+    document.querySelector('form')?.addEventListener('submit',e=>{
+      if(window.UNLOCKED_ARC_SECURE_FORM_READY) return;
+      const msg=document.getElementById('form-message');
+      if(msg) msg.textContent='Submission system is being connected. Please use the contact email for now.';
+      e.preventDefault();
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
