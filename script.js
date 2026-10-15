@@ -1,4 +1,3 @@
-```javascript
 /*!
  * UNLOCKED ARC — Advanced Site Script
  * ------------------------------------
@@ -1468,8 +1467,8 @@
       $('#share form');
 
 
-    if (!form)
-      return;
+    if (!form || form.id === 'story-form')
+      return; // submissions are handled by story-submit.js (Supabase)
 
 
     const submitButton =
@@ -2179,4 +2178,3 @@
   }
 
 })();
-```
